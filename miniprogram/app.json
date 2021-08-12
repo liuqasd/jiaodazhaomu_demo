@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "window": {
+    "backgroundColor": "#ff66ff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff99cc",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/_home.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/_user.png"
+    }],
+    "color": "#ffffff",
+    "selectedColor": "#ff6699",
+    "backgroundColor": "#ff99cc",
+    "borderStyle": "white",
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

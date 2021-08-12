@@ -1,0 +1,7 @@
+<!--pages/user/user.wxml-->
+<view class='container'>
+  <image src="/images/_head.png"></image>
+  <text>发布</text>
+  <text>我的发布  我的收藏</text>
+  <text>登录</text>
+</view>
