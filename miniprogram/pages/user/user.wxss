@@ -4,9 +4,3 @@
   height:100vh;
   text-align: center;
 }
-text {
-  display:block;
-}
-image,text {
-  margin-bottom:60px;
-}

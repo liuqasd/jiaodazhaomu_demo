@@ -1,10 +1,76 @@
 /**index.wxss**/
-
 page {
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;/**指定横向布局**/
+  justify-content: flex-end;/**主轴结束点对齐**/
+  align-items: center;/**侧轴居中(垂直居中)**/
+  border: 1rpx solid #ccc;/**边框**/
+  margin: 20rpx;/**边距，为了更加美观，不加没影响**/
+  border-radius: 20rpx;/**圆角**/
+}
+.input {
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  flex: 1;
+}
+
+.swiperContainer{
+  margin-top: 15rpx;
+  bottom: 8rpx;
+  position: relative;
+  }
+  .imageContainer{
+    width: 100%;
+    margin-top: 10rpx;
+    height: 350rpx;
+  }
+  .turnItem{
+    height: 340rpx;
+  }
+  .itemImg{
+    position: absolute;
+    width: 99%;
+    height: 300rpx;
+    margin-top: 20rpx;
+    border-radius: 15rpx;
+  }
+  .imgActive{
+    opacity: 1;
+    height: 340rpx;
+    margin-top: 0rpx;
+    transition:all .2s ease-in 0s;
+  }
+  /* 指示点修饰 */
+  .dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25rpx;
+    display: flex;
+    justify-content: center;
+  }
+  .dot{
+    margin: 0 8rpx;
+    width: 18rpx;
+    height: 18rpx;
+    background-color: white;
+    border-radius: 8rpx;
+    transition: all .5s;
+  }
+  .dot.active{
+    width: 24rpx;
+    background: #fad81e;
+  }
+
+.button-color{
+  color: #ff99cc;
 }
 
 .userinfo, .uploader, .tunnel {
@@ -53,7 +119,7 @@ page {
 
 .userinfo-nickname {
   font-size: 32rpx;
-  color: #007aff;
+  color: #ff99cc;
   background-color: white;
   background-size: cover;
   text-align: left;
@@ -81,7 +147,7 @@ page {
   width: 100%;
   line-height: 52px;
   font-size: 34rpx;
-  color: #007aff;
+  color: #ff99cc;
 }
 
 .uploader-container {
@@ -136,7 +202,7 @@ page {
   width: 140rpx;
   height: 140rpx;
   border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
+  background: linear-gradient(#ff99cc, #0063ce);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   align-content: center;

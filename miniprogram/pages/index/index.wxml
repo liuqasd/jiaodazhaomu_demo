@@ -1,5 +1,37 @@
 <!--index.wxml-->
-<view class="container">
+<view class='row'>
+  <icon class="icon-small" type="search" size="24"></icon>
+  <input class='input' placeholder='搜索竞赛名称'/>
+  <icon type='clear'/>
+</view>
+
+<view class="swiperContainer">
+  <swiper class="imageContainer" bindchange="swiperChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+    <block wx:for="{{thisCompetitionList}}" wx:key="index">
+      <swiper-item class="turnItem">
+          <image class="itemImg {{index == swiperCurrent ? 'imgActive':''}}" src='{{item.imagePath}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--指示点的修饰-->
+  <view class="dots">
+    <block wx:for="{{turnImg}}" wx:key="index">
+      <view class="dots{{index == swiperCurrent ? 'active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+
+<view>
+  <button class="button-color" type="default" plain="true">
+    <navigator style='font-weight: bold' url='/pages/people/people' open-type="navigate" hover-class='nav-hover' class="nav-default">招募队友</navigator>
+  </button>
+  <button type="default" plain="true">
+    <navigator style='font-weight: bold' url='/pages/team/team' open-type="navigate" hover-class='nav-hover' class="nav-default">寻找队伍</navigator>
+  </button>
+  <button class="button-color" type="default">
+    <navigator class="button-color" style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="nav-default">竞赛信息总览</navigator>
+  </button>
+</view>
 
   <!-- 用户 openid -->
   <view class="userinfo">
@@ -24,26 +56,25 @@
         style="background-image: url({{avatarUrl}})"
         size="default"
       ></button>
+      <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
     </block>
     <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击登录</button>
     </view>
   </view>
-
 
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
+      <text>点击发布</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
   </view>
-
 
   <!-- 操作数据库 -->
   <view class="uploader">
@@ -72,6 +103,3 @@
       <text>云调用</text>
     </navigator>
   </view>
-
-
-</view>

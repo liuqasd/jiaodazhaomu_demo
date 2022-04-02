@@ -3,7 +3,21 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
+      thisCompetitionList:[
+      {
+        imagePath:"/images/competition/fwwb.jpg",
+        name:"中国大学生服务外包创新创业大赛"
+      },
+      {
+        imagePath:"/images/competition/jsjsj.jpg",
+        name:"中国大学生计算机设计大赛"
+      },
+      {
+        imagePath:"/images/competition/acm.jpg",
+        name:"ACM国际大学生程序设计竞赛"
+      }
+    ],
+    swiperCurrent:"",  //指示点
     userInfo: {},
     hasUserInfo: false,
     logged: false,
@@ -11,6 +25,12 @@ Page({
     requestResult: '',
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
+  },
+  
+  swiperChange: function (e) {  //指示图标
+    this.setData({
+      swiperCurrent:e.detail.current
+    })
   },
 
   onLoad: function() {
