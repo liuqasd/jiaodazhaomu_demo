@@ -3,6 +3,13 @@ const app = getApp()
 
 Page({
   data: {
+    // 竞赛信息数据
+    comdataList:[
+      {title:"这是acm竞赛",time:"2022-4-13",url:"/images/competition/acm.jpg"},
+      {title:"服务外包大赛",time:"2022-4-13",url:"/images/competition/fwwb.jpg"},
+      {title:"大学生计算机竞赛",time:"2022-4-13",url:"/images/competition/js.jpg"}
+    ],
+    resData:[],
       thisCompetitionList:[
       {
         imagePath:"/images/competition/fwwb.jpg",
@@ -17,6 +24,30 @@ Page({
         name:"ACM国际大学生程序设计竞赛"
       }
     ],
+
+    // 网络数据请求  
+    onLoad: function (options) {
+      wx.request({
+        // 接口网址
+        url: '',
+        data:{},
+        success:res=>{
+          this.setData({
+            resData:res.data
+          })
+        }
+      })
+    },
+
+
+
+
+
+
+
+
+
+
     swiperCurrent:"",  //指示点
     userInfo: {},
     hasUserInfo: false,
@@ -81,3 +112,4 @@ Page({
     })
   },
 })
+
