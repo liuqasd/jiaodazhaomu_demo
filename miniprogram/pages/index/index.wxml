@@ -32,44 +32,32 @@
     <navigator class="button-color" style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="nav-default">竞赛信息总览</navigator>
   </button>
 </view>
-
-  <!-- 用户 openid -->
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
-      <view class="userinfo-block-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button 
-        wx:if="{{canIUseGetUserProfile}}" 
-        bindtap="getUserProfile"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      ></button>
-      <button
-        wx:else
-        open-type="getUserInfo" 
-        bindgetuserinfo="onGetUserInfo"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      ></button>
-      <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
-    </block>
-    <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击登录</button>
+<!-- ---------------------------------------------------竞赛信息------------------------------------------------------ -->
+<view class="out"> 
+<view class="Competition_Details" wx:for="{{comdataList}}">
+    <view class="pic_details"> 
+      <image src="{{item.url}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
+    </view>
+    <view class="competition_textdet">
+    <view class="texttitile"> {{item.title}}</view>
+    <view class="cmptime">{{item.time}}</view>
     </view>
   </view>
+</view>
+
+
+
+
+
+
+
+
+
 
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
-      <text>点击发布</text>
+      <text>上传图片</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>

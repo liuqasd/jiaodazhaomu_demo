@@ -1,75 +1,62 @@
 <!--pages/user/user.wxml-->
-<view class="container">
-    <view class="top-view"></view>
-    <view class="userinfo">
-        <view bindtap="bindViewTap" class="userinfo-block-avatar" wx:if="{{canIUseOpenData}}">
-            <open-data type="userAvatarUrl"></open-data>
-        </view>
-        <block wx:elif="{{!hasUserInfo}}">
-            <button bindtap="getUserProfile" class="userinfo-avatar" size="default" style="background-image: url({{avatarUrl}})" wx:if="{{canIUseGetUserProfile}}"></button>
-            <button bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" openType="getUserInfo" size="default" style="background-image: url({{avatarUrl}})" wx:else></button>
-        </block>
-        <image class="userinfo-block-avatar" src="{{avatarUrl}}" wx:else></image>
-        <button bindtap="toast" class="userinfo-nickname" wx:if="{{!CanIUseInfo}}">点击登录</button>
-        <view class="COLUMN" wx:elif="{{CanIUseInfo}}">
-            <view class="ROW" style="justify-content:space-between;width:100%">
-                <view class="ROW">
-                    <text wx:if="{{userCV.name!=''}}">{{userCV.name}}</text>
-                    <text wx:else>{{userCV.nickName}}</text>
-                </view>
-            </view>
-            <view class="ROW2" wx:if="{{userCV.school!=''}}">
-            {{userCV.school}}<text decode="true">&nbsp;|&nbsp;</text>{{userCV.major}}<text decode="true">&nbsp;|&nbsp;</text>{{userCV.grade}}
-          </view>
-            <view bindtap="editCV" class="edit-cv">
-                <view>
-                    <text class="title11">在线简历</text>
-                </view>
-            </view>
-        </view>
-    </view>
-    
-            <view bindtap="{{CanIUseInfo?'myTeam':'toast'}}" class="uploader1">
-                <view class="team">
-                    <view class="my-team">
-                        <navigator style='font-weight: bold' url='/pages/mypublish/mypublish' open-type="navigate" hover-class='nav-hover' class="nav-default">我的招募</navigator>
-                    </view>
-                </view>
-            </view>
-            <view bindtap="{{CanIUseInfo?'myCollect':'toast'}}" class="uploader2">
-                <button type="primary">
-                        <navigator style='font-weight: bold' url='/pages/mycollect/mycollect' open-type="navigate" hover-class='nav-hover' class="nav-default">我的收藏</navigator>
-                </button>
-            </view>
-
-
-    <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: row\n横向布局</text>
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+      <view class="userinfo-block-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
       </view>
-      <view class="page-section-spacing">
-        <view class="flex-wrp" style="flex-direction:row;">
-          <view class="flex-item demo-text-1"></view>
-          <view class="flex-item demo-text-2"></view>
-          <view class="flex-item demo-text-3"></view>
-        </view>
-      </view>
-    </view>
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: column\n纵向布局</text>
-      </view>
-      <view class="flex-wrp" style="flex-direction:column;">
-        <view class="flex-item flex-item-V demo-text-1"></view>
-        <view class="flex-item flex-item-V demo-text-2"></view>
-        <view class="flex-item flex-item-V demo-text-3"></view>
-      </view>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button 
+        wx:if="{{canIUseGetUserProfile}}" 
+        bindtap="getUserProfile"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+      <button
+        wx:else
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    </block>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击登录</button>
     </view>
   </view>
-
-
-  <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="nav-default">点击发布</navigator>
-  
-  
+<view class="container">
+  <block wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view bindtap="bindViewTap" class='header'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+          授权登录
+        </button>
+      </view>
+      <view wx:else>请升级微信版本</view>
+  </block>
+  <block wx:else>
+    <navigator style='font-weight: bold' url='/pages/mypublish/mypublish' open-type="navigate" hover-class='nav-hover' class="nav-default">
+      我的招募
+    </navigator>
+    <button type="default">
+      <navigator style='font-weight: bold' url='/pages/mycollect/mycollect' open-type="navigate" hover-class='nav-hover' class="nav-default">
+        我的收藏
+      </navigator>
+    </button>
+    <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="">
+      点击发布
+    </navigator>
+  </block>
 </view>
