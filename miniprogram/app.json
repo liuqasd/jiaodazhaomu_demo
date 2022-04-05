@@ -18,8 +18,7 @@
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/room/room"
+    "pages/openapi/cloudid/cloudid"
   ],
   "window": {
     "backgroundColor": "#F5F5F5",

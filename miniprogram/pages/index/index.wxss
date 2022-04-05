@@ -112,7 +112,6 @@ page {
   width: 100rpx;
 }
 
-
 .userinfo-avatar:after {
   border: none;
 }
