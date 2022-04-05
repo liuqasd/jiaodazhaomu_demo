@@ -1,8 +1,0 @@
-<view class="container">
-  <text>类型：{{mypublish.type}}</text>
-  <text>竞赛名：{{mypublish.name}}</text>
-  <text>介绍：{{mypublish.introduction}}</text>
-  <text>要求：{{mypublish.require}}</text>
-  <text>联系方式：{{mypublish.contact}}</text>
-  <text>状态：{{state}}</text>
-</view>

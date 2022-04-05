@@ -1,8 +1,0 @@
-<view class="container">
-  <text>类型：{{mycollect.type}}</text>
-  <text>竞赛名：{{mycollect.name}}</text>
-  <text>介绍：{{mycollect.introduction}}</text>
-  <text>要求：{{mycollect.require}}</text>
-  <text>联系方式：{{mycollect.contact}}</text>
-  <text>状态：{{state}}</text>
-</view>
