@@ -32,7 +32,7 @@
     <navigator class="button-color" style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="nav-default">竞赛信息总览</navigator>
   </button>
 </view>
-
+<!-- ---------------------------------------------------------- 竞赛信息--------------------------------------------------------------->
 <view class="out"> 
 <view class="Competition_Details" wx:for="{{comdataList}}">
     <view class="pic_details"> 

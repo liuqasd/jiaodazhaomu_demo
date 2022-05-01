@@ -1,2 +1,13 @@
 <!--pages/contest/contest.wxml-->
-<text>pages/contest/contest.wxml</text>
+<view class="out"> 
+<view class="Competition_Details" wx:for="{{comdataList}}">
+    <view class="pic_details"> 
+      <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
+    </view>
+    <view class="competition_textdet">
+    <view class="texttitile"> {{item.title}}</view>
+    <view class="cmptime">{{item.time}}</view>
+    </view>
+    <navigator url='{{item.url}}'>点击详情</navigator>
+</view>
+</view>

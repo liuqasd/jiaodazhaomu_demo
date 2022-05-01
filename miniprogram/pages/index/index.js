@@ -3,11 +3,11 @@ const app = getApp()
 
 Page({
   data: {
-    // 竞赛信息数据
+    // -----------------------------------------------------------------竞赛信息数据
     comdataList:[
-      {title:"acm竞赛",time:"2022-4-13",temp:"/images/competition/acm.jpg",url:"../../pager/competition/acm/acm"},
-      {title:"服务外包大赛",time:"2022-4-13",temp:"/images/competition/fwwb.jpg",url:"../../pager/competition/fwwb/fwwb"},
-      {title:"大学生计算机竞赛",time:"2022-4-13",temp:"/images/competition/js.jpg",url:"../../pager/competition/jsjds/jsjds"}
+      {title:"acm竞赛",time:"2022-4-13至2023-4-13",temp:"/images/competition/acm.jpg",url:"../../pager/competition/acm/acm"},
+      {title:"服务外包大赛",time:"2022-4-13至2023-4-1",temp:"/images/competition/fwwb.jpg",url:"../../pager/competition/fwwb/fwwb"},
+      {title:"大学生计算机竞赛",time:"2022-4-13至2023-4-1",temp:"/images/competition/js.jpg",url:"../../pager/competition/jsjds/jsjds"}
     ],
     resData:[],
       thisCompetitionList:[
@@ -38,14 +38,6 @@ Page({
         }
       })
     },
-
-
-
-
-
-
-
-
 
 
     swiperCurrent:"",  //指示点
