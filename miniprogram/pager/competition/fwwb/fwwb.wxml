@@ -16,9 +16,11 @@
       <rich-text nodes="{{rule}}"></rich-text>
     </view>
     <view class='img_box' catchtap='ellbtn' wx:if="{{height>200}}">
-      <image class='img_icon' src="{{ellipsis?'../../../images/down.jpg':'../../../images/up.png'}}"></image>
+      <image class='img_icon' src="{{ellipsis?'../../../images/down.png':'../../../images/up.png'}}"></image>
     </view>
     <view wx:if="{{height>200}}" class="drop_shadow"></view>
   </view>
+  <button>
   <navigator>寻找队伍</navigator>
+</button>
 </view>

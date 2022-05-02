@@ -9,6 +9,7 @@ Page({
       {title:"服务外包大赛",time:"2022-4-13至2023-4-1",temp:"/images/competition/fwwb.jpg",url:"../../pager/competition/fwwb/fwwb"},
       {title:"大学生计算机竞赛",time:"2022-4-13至2023-4-1",temp:"/images/competition/js.jpg",url:"../../pager/competition/jsjds/jsjds"}
     ],
+    
     resData:[],
       thisCompetitionList:[
       {
