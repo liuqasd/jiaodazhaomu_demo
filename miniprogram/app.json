@@ -8,7 +8,6 @@
     "pages/logs/logs",
     "pages/detail/detail",
     "pages/contest/contest",
-    "pages/user/user",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -40,7 +39,7 @@
       "selectedIconPath": "images/_home.png"
     },
     {
-      "pagePath": "pages/user/user",
+      "pagePath": "pages/home/home",
       "text": "我的",
       "iconPath": "images/user.png",
       "selectedIconPath": "images/_user.png"
