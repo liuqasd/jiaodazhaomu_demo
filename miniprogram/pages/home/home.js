@@ -1,24 +1,17 @@
 const app = getApp()
-wx.cloud.init({
-    env: "cloud1-6g4ohasv60752e78"
-});
 wx.cloud.database();
 
 Page({
-  /**
-   * 页面的初始数据
-   * data: {
-    //判断小程序的API，回调，参数，组件等是否在当前版本可用。
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide: false
-  },
-   */
+  //页面的初始数据 
   data: {
   userInfo: {},
   hasUserInfo: false,
   logged: false,
   takeSession: false,
   requestResult: '',
+  //判断小程序的API，回调，参数，组件等是否在当前版本可用
+  canIUse: wx.canIUse('button.open-type.getUserInfo'),
+  isHide: false,
   canIUseGetUserProfile: false,
   canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
 },
@@ -67,7 +60,7 @@ Page({
         console.log('[云函数] [login] user openid: ', res.result.openid)
         app.globalData.openid = res.result.openid
         wx.navigateTo({
-          url: '../userConsole/userConsole',
+          url: '../login/login',
         })
       },
       fail: err => {

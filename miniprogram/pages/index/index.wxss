@@ -47,28 +47,7 @@ page {
     margin-top: 0rpx;
     transition:all .2s ease-in 0s;
   }
-  /* 指示点修饰 */
-  .dots{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 25rpx;
-    display: flex;
-    justify-content: center;
-  }
-  .dot{
-    margin: 0 8rpx;
-    width: 18rpx;
-    height: 18rpx;
-    background-color: white;
-    border-radius: 8rpx;
-    transition: all .5s;
-  }
-  .dot.active{
-    width: 24rpx;
-    background: #fad81e;
-  }
-
+ 
 .button-color{
   color: #ff99cc;
 }
@@ -160,11 +139,6 @@ page {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
 .tunnel {
   padding: 0 0 0 40rpx;
 }
@@ -225,7 +199,7 @@ page {
   word-break: break-all;
 }
 
-/* ----------------------------------------------------竞赛信息的渲染 -------------------------------------------------*/
+/* --竞赛信息的渲染 --*/
 .out{padding: 30rpx,30rpx,30rpx,0rpx; box-sizing: border-box;padding: 60rpx 0 0 0;}
 .Competition_Details{  display: flex; height: 150rpx;margin-bottom: 20rpx;border-bottom: 2px solid #beb6b6}
 .pic_details{flex: 2 ;padding-bottom: 2;}
@@ -236,7 +210,6 @@ page {
 .layout{ width: 318px;height: 40px;
 background-color: #ff99cc;
 border-bottom: 1px solid #beb6b6 ;
-
 }
 .font-style{
   height: 40px;

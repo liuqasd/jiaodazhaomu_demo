@@ -25,7 +25,7 @@
       <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
     </block>
     <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击登录</button>
+      <button class="userinfo-nickname" bindtap="onGetOpenid" open-type="getUserInfo">点击登录</button>
     </view>
   </view>
 <view class="container">
