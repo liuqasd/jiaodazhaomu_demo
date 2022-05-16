@@ -19,7 +19,9 @@
     "pages/competition/acm/acm",
     "pages/competition/jsjds/jsjds",
     "pages/competition/fwwb/fwwb",
+    "pages/competition/test/test",
     "pages/openapi/cloudid/cloudid"
+
   ],
   "window": {
     "backgroundColor": "#F5F5F5",

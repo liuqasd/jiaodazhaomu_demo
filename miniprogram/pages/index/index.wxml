@@ -31,10 +31,10 @@
 
 <!-- 竞赛信息 -->
 <view class="out"> 
-<view class="layout">
+  <view class="userinfo">
     <navigator url='/pages/contest/contest' class="font-style">竞赛信息总览</navigator>
 </view>
-<navigator class="Competition_Details" wx:for="{{comdataList}}"  url='{{item.url}}'>
+<navigator class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" url='{{item.url}}'>
     <view class="pic_details"> 
       <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
     </view>
