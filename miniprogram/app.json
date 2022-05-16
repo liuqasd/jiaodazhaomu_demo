@@ -16,9 +16,9 @@
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
-    "pager/competition/acm/acm",
-    "pager/competition/jsjds/jsjds",
-    "pager/competition/fwwb/fwwb",
+    "pages/competition/acm/acm",
+    "pages/competition/jsjds/jsjds",
+    "pages/competition/fwwb/fwwb",
     "pages/openapi/cloudid/cloudid"
   ],
   "window": {
