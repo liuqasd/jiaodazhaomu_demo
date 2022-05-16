@@ -1,1 +1,121 @@
-/* pages/publish/publish.wxss */
+/* pages/list/list.wxss */
+.comname{
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.workname{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.comintrd{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.leaderintrd{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.workintrd{
+  display: flex;
+  flex-wrap: wrap;
+justify-content:flex-start;
+}
+.contract{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.num{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.photo{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:baseline;
+  border:1px solid #ff99cc;
+  margin:5px;
+  padding:5px;
+  width: 95%;
+  border-radius: 5px;
+}
+.publishbt{
+  background-color:#ff99cc;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+input{
+  border:1px solid #ff99cc;
+  margin:5px;
+  padding:5px;
+  width: 78%;
+  border-radius: 5px;
+}
+.name_workintrdmin{
+  width: 340px;
+  color: #7f7f7f;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:center;
+}
+  
+.put_workintrd{
+  border:1px solid #ff99cc;
+  margin:5px;
+  padding:5px;
+  width: 78%;
+  height: 70px;
+  border-radius: 5px;
+}
+.upload{
+  background-color:#ff99cc;
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+.delete{
+  background-color:lavender;
+  color: black;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+/* 类别选择器 */
+.kind{
+  display: flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+}
+.kind-1{
+  color: black;
+
+  width: 150px;
+
+}
+.kind-2{
+  color: black;
+  width: 270px;
+  margin:5px;
+  padding:5px;
+  display: flex;
+  flex-direction:row;
+  background-color:lavender;
+  border-radius: 98rpx;
+  justify-content:center;
+  align-items:center;
+}
