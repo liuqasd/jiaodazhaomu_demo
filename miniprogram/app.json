@@ -34,14 +34,14 @@
     {
       "pagePath": "pages/index/index",
       "text": "首页",
-      "iconPath": "images/home.png",
-      "selectedIconPath": "images/_home.png"
+      "iconPath": "/images/index.png",
+      "selectedIconPath": "/images/index.png"
     },
     {
       "pagePath": "pages/home/home",
       "text": "我的",
-      "iconPath": "images/user.png",
-      "selectedIconPath": "images/_user.png"
+      "iconPath": "/images/user.png",
+      "selectedIconPath": "/images/user.png"
     }],
     "color": "#ffffff",
     "selectedColor": "#ff6699",

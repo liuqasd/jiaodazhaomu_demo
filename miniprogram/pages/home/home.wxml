@@ -28,6 +28,7 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid" open-type="getUserInfo">点击登录</button>
     </view>
   </view>
+  
 <view class="container">
   <block wx:if="{{isHide}}">
     <view wx:if="{{canIUse}}" >
