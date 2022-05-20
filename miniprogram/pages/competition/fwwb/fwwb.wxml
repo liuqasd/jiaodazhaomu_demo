@@ -1,0 +1,28 @@
+<!--pages/competition/fwwb/fwwb.wxml-->
+<!--pager/competition/fwwb/fwwb.wxml-->
+<view class="con">
+<image src="../../../images/competition/fwwb.jpg" style="width: 652rpx; height: 404rpx; display: inline-block; box-sizing: border-box"></image>
+ <view class="title">2022服务外包大赛</view>
+ <view>
+ <text class="text">报名时间：2022年4月13日-----2023年4月13日</text>
+ </view>
+ <view><text class="text">比赛时间 待定</text></view>
+ <view><text class="text">主办方：西南交通大学       全省性</text></view>
+ <view>---------------------------------------</view>
+ <view>---------------------------------------</view>
+ <view class="maintitle">竞赛信息</view>
+ <view class="{{isHide?'hide':'show'}}" bindtap="showMoreMsg"></view>
+  <view class="tips">
+    <view class="{{height>200?'ative':''}} {{!ellipsis?'no_tive':''}}" id="text">
+      <rich-text nodes="{{rule}}"></rich-text>
+    </view>
+    <view class='img_box' catchtap='ellbtn' wx:if="{{height>200}}">
+      <image class='img_icon' src="{{ellipsis?'../../../images/down.png':'../../../images/up.png'}}"></image>
+    </view>
+    <view wx:if="{{height>200}}" class="drop_shadow"></view>
+  </view>
+  <button>
+  <navigator>寻找队伍</navigator>
+</button>
+</view>
+
