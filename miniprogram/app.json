@@ -20,7 +20,8 @@
     "pages/competition/jsjds/jsjds",
     "pages/competition/fwwb/fwwb",
     "pages/competition/test/test",
-    "pages/openapi/cloudid/cloudid"
+    "pages/openapi/cloudid/cloudid",
+    "pages/teammessage/teammessage"
   ],
   "window": {
     "backgroundColor": "#F3F3F3",
