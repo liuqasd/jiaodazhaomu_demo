@@ -1,0 +1,53 @@
+<!--pages/publish/publish.wxml-->
+
+<form bindsubmit="submitform">
+  <view class="comname">
+    <text class="name_comname">竞赛名称</text>
+    <input class="put_comname" placeholder="请输入竞赛名称" name="active_name"></input>
+  </view>
+  <view class="workname">
+    <text class="name_workname">项目名称</text>
+    <input placeholder="请输入项目名称" class="put_workname" value="{{msg_workname}}" name="active_name2"></input>
+  </view>
+  <view class="comintrd">
+    <text class="name_comintrd">项目简介</text>
+    <input placeholder="请输入项目简介" class="put_comintrd" value="{{msg_comintrd}}" name="active_intro"></input>
+  </view>
+  <view class="leaderintrd">
+    <text class="name_leaderintrd">队长简介</text>
+    <input placeholder="请输入队长简介" class="put_leaderintrd" value="{{msg_leaderintrd}}" name="active_leader"></input>
+  </view>
+  <view class="workintrd">
+    <text class="name_workintrd">项目详情</text>
+    <input placeholder="请输入项目详情" class="put_workintrd" value="{{msg_workintrd}}" name="active_detail"></input>
+    <text class="name_workintrdfj">项目附件:</text>
+    <text class="name_workintrdmin" style="font-size: 20rpx;">{{username}}</text>
+    <button class="upload" bindtap="uploadbutton" >上传附件</button>
+    <button class="delete" bindtap="deletebutton">删除附件</button>
+  </view>
+  <view class="num">
+    <text class="name_num">招募人数</text>
+    <input placeholder="请输入招募人数" class="put_num" value="{{msg_num}}" name="active_number"></input>
+  </view>
+  <view class="contract">
+    <text class="name_contract">联系方式</text>
+    <input placeholder="请输入联系方式" class="put_contract" value="{{msg_contract}}" name="active_phone"></input>
+  </view>
+  <!-- 日期 -->
+  <view class="kind">
+      <view class="kind-1" >项目结束时间</view>
+      <picker mode="date" value="{{date}}" start="2022-01-01" name="active_endtime" end="2022-12-31" bindchange="bindDateChange">
+        <view class="kind-2" >
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  <view class="pubulish">
+    <text>请上传一张封面图片</text>
+    <view class="photo" style="display: flex;flex-direction:row;align-items: center;">
+      <image bindtap="lookimages" data-src="{{image}}" style="width: 250rpx;height:250rpx;" src="{{image}}"></image>
+      <image bindtap="upimages" style="width: 220rpx;height:220rpx;border:1rpx solid #DDDDDD;" src="/images/upload.png"></image>
+    </view>
+  </view>
+  <button form-type="submit" class="publishbt" bindtap="pubulishbutton">发布</button>
+</form>

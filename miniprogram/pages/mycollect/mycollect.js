@@ -1,0 +1,12 @@
+Page({
+  data:{
+    mycollect:{
+      type:"找人/找队",
+      name:"竞赛名",
+      introduction:"介绍",
+      require:"要求",
+      contact:"QQorPhone"
+    },
+    state:"已发布"
+  }
+})

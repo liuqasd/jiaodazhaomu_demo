@@ -1,0 +1,107 @@
+<view class="page">
+    <view class="poster" wx:if="{{contest.poster!=''}}">
+        <image class="contest-poster" src="{{contest.poster}}"></image>
+    </view>
+    <view class="contest-info">
+        <view class="contest-deadline" wx:if="{{num!=''}}">
+            <text class="title5">距离报名截止还有</text>
+            <text class="title5">{{num}}</text>
+            <text class="title5">天</text>
+        </view>
+        <view class="contest-deadline" wx:else>
+            <text style="font-size:30 rpx;color:#EB6B63;font-weight:bold">报名已结束</text>
+        </view>
+        <view class="contest-name">
+            <text class="title3">{{contest.name}}</text>
+        </view>
+        <view class="registration-time">
+            <text class="title2">报名时间 </text>
+            <text class="title2">{{regisStartT}}</text>
+            <text class="title2">——</text>
+            <text class="title2">{{regisEndT}}</text>
+        </view>
+        <view class="contest-time">
+            <text class="title2">比赛时间 </text>
+            <text class="title2" wx:if="{{contestStartT!=''}}">{{contestStartT}}</text>
+            <text class="title2" wx:if="{{contestStartT!=''}}">——</text>
+            <text class="title2" wx:if="{{contestStartT!=''}}">{{contestEndT}}</text>
+            <text class="title2" wx:if="{{contestStartT==''}}">待定</text>
+        </view>
+        <view class="last-line">
+            <view class="contest-sponsor">
+                <text class="title2">主办方 </text>
+                <text class="title2">{{contest.organization}}</text>
+            </view>
+            <view class="contest-level">
+                <text class="title2">{{contest.level}} </text>
+            </view>
+        </view>
+    </view>
+    <view class="view-normal" wx:if="{{contest.detail!=''||contest.detailImg.length!=0}}">
+        <view class="big-title">
+            <text class="title3">竞赛详情</text>
+        </view>
+        <view class="detail-info {{isShow?'on':''}}" style="overflow-wrap: break-word" wx:if="{{contest.detail!=''}}">
+            <text class="title2" userSelect="{{true}}">{{contest.detail}}</text>
+        </view>
+        <view class="detail-info {{isShow?'on':''}}" wx:if="{{contest.detailImg.length!=0}}" wx:for="{{contest.detailImg}}" wx:key="unique">
+            <image bindtap="previewImage" class="thumb" data-current="{{item}}" src="{{item}}" style="width: {{2*image_width}}rpx; height: {{2*image_width}}rpx"></image>
+        </view>
+    </view>
+    <view wx:if="{{contest.detail.length>138&&contest.detail!=''||detailImg.length!=0}}">
+        <button bindtap="toggle" class="show-button">{{isShow?'收起':'展开'}}</button>
+    </view>
+    <view class="view-normal" wx:if="{{contest.attachment!=''}}">
+        <view class="big-title">
+            <text class="title3">竞赛附件</text>
+        </view>
+        <view class="Cattachment" wx:for="{{contest.attachment}}" wx:key="unique">
+            <view class="attachment-name">
+                <text class="title2">{{item.name}}</text>
+            </view>
+            <view>
+                <image bindtap="download" class="download-icon" data-url="{{item.path}}" src="../../images/download.svg"></image>
+            </view>
+        </view>
+    </view>
+    <view class="view-normal" wx:if="{{contest.publisher!=''}}">
+        <view class="big-title">
+            <text class="title3">竞赛发布者</text>
+        </view>
+        <view class="Cpublisher">
+            <view class="publisherPhoto" wx:if="{{contest.publisherPhoto!=''}}">
+                <image class="publisherPhoto" src="{{contest.publisherPhoto}}"></image>
+            </view>
+            <view class="publisher-name">
+                <text class="title2">{{contest.publisher}}</text>
+            </view>
+        </view>
+        <view></view>
+    </view>
+    <view class="bottom" wx:if="{{showBottom=='true'}}">
+        <view class="bottom-left">
+            <view class="share-contest">
+                <button class="share" data-id="111" openType="share">
+                    <image bindtap="share" class="shareIcon" src="../../images/share.svg"></image>
+                </button>
+            </view>
+            <view>
+                <view bindtap="{{CanIUseInfo?'collect_contest':'toast1'}}" wx:if="{{judgeCollect==false}}">
+                    <image class="collect-icon" src="../../images/collect.svg"></image>
+                </view>
+                <view bindtap="{{CanIUseInfo?'delete_collect':'toast2'}}" wx:elif="{{judgeCollect==true}}">
+                    <image class="collect-icon" src="../../images/collect-click.svg"></image>
+                </view>
+            </view>
+        </view>
+        <view class="bottom-right">
+            <view>
+                <button bindtap="goToMyTeam" class="Gbutton">立即组队</button>
+            </view>
+            <view bindtap="copy">
+                <button bindtap="copyText" class="Gbutton" data-text="{{contest.address}}">立即报名</button>
+            </view>
+        </view>
+    </view>
+    <view class="kong"></view>
+</view>

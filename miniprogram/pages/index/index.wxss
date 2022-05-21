@@ -1,0 +1,239 @@
+/**index.wxss**/
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;/**指定横向布局**/
+  justify-content: flex-end;/**主轴结束点对齐**/
+  align-items: center;/**侧轴居中(垂直居中)**/
+  border: 1rpx solid #ccc;/**边框**/
+  margin: 20rpx;/**边距，为了更加美观，不加没影响**/
+  border-radius: 20rpx;/**圆角**/
+}
+.input {
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  flex: 1;
+}
+
+.swiperContainer{
+  margin-top: 15rpx;
+  bottom: 8rpx;
+  position: relative;
+  }
+  .imageContainer{
+    width: 100%;
+    margin-top: 10rpx;
+    height: 350rpx;
+  }
+  .turnItem{
+    height: 340rpx;
+  }
+  .itemImg{
+    position: absolute;
+    width: 99%;
+    height: 300rpx;
+    margin-top: 20rpx;
+    border-radius: 15rpx;
+  }
+  .imgActive{
+    opacity: 1;
+    height: 340rpx;
+    margin-top: 0rpx;
+    transition:all .2s ease-in 0s;
+  }
+ 
+.button-color{
+  color: #ff99cc;
+}
+
+.userinfo, .uploader, .tunnel {
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo {
+  padding-left: 120rpx;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-block-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo-avatar[size] {
+  width: 100rpx;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #ff99cc;
+  background-color: white;
+  background-size: cover;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 10px;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.userinfo-nickname-wrapper {
+  flex: 1;
+}
+
+.uploader, .tunnel {
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.uploader-text, .tunnel-text {
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #ff99cc;
+}
+
+.uploader-container {
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel {
+  padding: 0 0 0 40rpx;
+}
+
+.tunnel-text {
+  position: relative;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel-text:first-child {
+  border-top: none;
+}
+
+.tunnel-switch {
+  position: absolute;
+  right: 20rpx;
+  top: -2rpx;
+}
+
+.disable {
+  color: #888;
+}
+
+.service {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: linear-gradient(#ff99cc, #0063ce);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.service-button {
+  position: absolute;
+  top: 40rpx;
+}
+
+.service:active {
+  box-shadow: none;
+}
+
+.request-text {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}
+
+/* --竞赛信息的渲染 --*/
+/* pages/contest/contest.wxss */
+.out{padding: 30rpx,30rpx,30rpx,0rpx; box-sizing: border-box;padding: 0rpx 0 0 0;}
+.Competition_Details{  display: flex; height: 150rpx;margin-bottom: 20rpx;border-bottom: 4rpx solid #beb6b6}
+.pic_details{flex: 2 ;padding-bottom: 2;}
+.pic_details image{width: 100%;height: 100%;}
+.competition_textdet{flex: 5;padding-left: 10rpx;display: flex; flex-direction: column;justify-content: space-between;}
+.competition_textdet .texttitile{font-size: 32rpx;}
+.competition_textdet .cmptime{font-size: 32rpx; color: #999999;}
+.layout{ width: 318rpx;height: 80rpx;
+background-color: #ff99cc;
+border-bottom: 1px solid #beb6b6 ;
+}
+.font-style{
+  height: 40rpx;
+  width: 204rpx;
+  color: #fff;
+ font-weight: 700;
+ text-align: left;
+ line-height: 40rpx;
+}
+.userinfo {
+  margin-top: 40rpx;
+  height: 90rpx;
+  width: 100%;
+  background: #ff99cc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo {
+  padding-left: 70rpx;
+}

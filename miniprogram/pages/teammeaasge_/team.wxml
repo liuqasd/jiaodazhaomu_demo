@@ -1,0 +1,16 @@
+<text>当前队伍数：{{index+1}}</text>
+<view class="PeopleandTea" 
+      wx:for="{{thisTeamList}}"
+      bindtap="f0"
+      data-team-id="{{item.id}}"
+      >
+  <image class="PeopleandTea-image" src='{{item.imagePath}}'></image>
+  <view class="PeopleandTea-details">
+    <text>序号:{{item.id+1}}</text>
+    <text>竞赛名：{{item.name}}</text>
+    <text>队伍简介：{{item.introduction}}</text>
+    <text>意愿：{{item.aspiration}}</text>
+    <text>联系方式：{{item.contact}}</text>
+    <text wx:if="{{item.isAlreadyHave}}" style="font-size:16px; color:red;">已有</text>
+  </view>
+</view>

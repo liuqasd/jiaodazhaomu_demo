@@ -1,0 +1,11 @@
+
+<view class="install_tip" wx:if="{{showUploadTip}}">
+  <view class="install_tip_back"></view>
+  <view class="install_tip_detail">
+    <view class="install_tip_detail_shell">
+      {{tipText}}
+      <view bindtap="copyShell" class="install_tip_detail_copy">复制</view>
+    </view>
+  </view>
+</view>
+
