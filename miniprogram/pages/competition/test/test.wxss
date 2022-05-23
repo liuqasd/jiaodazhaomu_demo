@@ -1,1 +1,48 @@
 /* pages/competition/test/test.wxss */
+
+
+.request-text {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}
+
+/* --竞赛信息的渲染 --*/
+/* pages/contest/contest.wxss */
+.out{padding: 30rpx,30rpx,30rpx,0rpx; box-sizing: border-box;padding: 0rpx 0 0 0;}
+.Competition_Details{  display: flex; height: 150rpx;margin-bottom: 20rpx;border-bottom: 4rpx solid #beb6b6}
+.pic_details{flex: 2 ;padding-bottom: 2;}
+.pic_details image{width: 100%;height: 100%;}
+.competition_textdet{flex: 5;padding-left: 10rpx;display: flex; flex-direction: column;justify-content: space-between;}
+.competition_textdet .texttitile{font-size: 32rpx;}
+.competition_textdet .cmptime{font-size: 32rpx; color: #999999;}
+.layout{ width: 318rpx;height: 80rpx;
+background-color: #ff99cc;
+border-bottom: 1px solid #beb6b6 ;
+}
+.font-style{
+  height: 40rpx;
+  width: 204rpx;
+  color: #fff;
+ font-weight: 700;
+ text-align: left;
+ line-height: 40rpx;
+}
+.userinfo {
+  margin-top: 40rpx;
+  height: 90rpx;
+  width: 100%;
+  background: #ff99cc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo {
+  padding-left: 70rpx;
+}

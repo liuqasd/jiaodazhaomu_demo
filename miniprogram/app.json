@@ -21,7 +21,8 @@
     "pages/competition/fwwb/fwwb",
     "pages/competition/test/test",
     "pages/openapi/cloudid/cloudid",
-    "pages/teammessage/teammessage"
+    "pages/teammessage/teammessage",
+    "pages/competition/test2/test2"
   ],
   "window": {
     "backgroundColor": "#F3F3F3",
@@ -29,23 +30,24 @@
     "navigationBarBackgroundColor": "#ff99cc",
     "navigationBarTitleText": "交大招募",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh":true,
+    "enablePullDownRefresh": true,
     "backgroundColorBottom": ""
   },
-  "tabBar":{
+  "tabBar": {
     "list": [
-    {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "/images/index_.png",
-      "selectedIconPath": "/images/index__.png"
-    },
-    {
-      "pagePath": "pages/home/home",
-      "text": "我的",
-      "iconPath": "/images/user_.png",
-      "selectedIconPath": "/images/user__.png"
-    }],
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index_.png",
+        "selectedIconPath": "/images/index__.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "/images/user_.png",
+        "selectedIconPath": "/images/user__.png"
+      }
+    ],
     "color": "#ffffff",
     "selectedColor": "#ff6699",
     "backgroundColor": "#ff99cc",

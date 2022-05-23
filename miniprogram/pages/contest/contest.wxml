@@ -1,5 +1,5 @@
 <view class="out"> 
-<navigator class="Competition_Details" wx:for="{{comdataList}}"  url='{{item.url}}'>
+<view class="Competition_Details" wx:for="{{comdataList}}"   data-id="{{item.id}}" bindtap='skipTravelDetails'>
     <view class="pic_details"> 
       <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
     </view>
@@ -8,5 +8,5 @@
     <view class="cmptime">{{item.time}}</view>
     </view>
     <!-- <navigator url='{{item.url}}'>点击详情</navigator> -->
-</navigator>
+</view>
 </view>

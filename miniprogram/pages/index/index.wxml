@@ -34,8 +34,8 @@
   <view class="userinfo">
     <navigator url='/pages/contest/contest' class="font-style">竞赛信息总览</navigator>
 </view>
-<navigator class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" url='{{item.url}}'>
-    <view class="pic_details"> 
+<view class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" data-id="{{item.id}}" bindtap='skipTravelDetails'>
+    <view class="pic_details"  > 
       <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
     </view>
     <view class="competition_textdet">
@@ -43,7 +43,7 @@
     <view class="cmptime">{{item.time}}</view>
     </view>
     <!-- <navigator url='{{item.url}}'>点击详情</navigator> -->
-</navigator>
+</view >
 </view>
 
   <!-- 操作数据库 -->
