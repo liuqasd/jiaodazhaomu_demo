@@ -2,26 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
-    "pages/login/login",
     "pages/publish/publish",
-    "pages/wxml/index",
     "pages/logs/logs",
-    "pages/detail/detail",
     "pages/contest/contest",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
     "pages/competition/acm/acm",
     "pages/competition/jsjds/jsjds",
     "pages/competition/fwwb/fwwb",
     "pages/competition/test/test",
-    "pages/openapi/cloudid/cloudid",
     "pages/teammessage/teammessage",
+    "pages/team/team",
     "pages/competition/test2/test2"
   ],
   "window": {
@@ -54,5 +43,8 @@
     "borderStyle": "white",
     "position": "bottom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
 }

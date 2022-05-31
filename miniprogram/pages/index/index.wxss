@@ -1,11 +1,5 @@
-/**index.wxss**/
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
+/**单位是rpx，而不是px。rpx是小程序为适应不同宽度的手机屏幕，而发明的一种长度单位。不管什么手机屏幕，宽度一律为750rpx。它的好处是换算简单，如果一个元素的宽度是页面的一半，只要写成width: 375rpx;即可**/
+/**搜索框**/
 .row{
   display: flex;
   flex-direction: row;/**指定横向布局**/
@@ -20,36 +14,48 @@ page {
   padding-bottom: 10rpx;
   flex: 1;
 }
-
+/**轮播**/
 .swiperContainer{
   margin-top: 15rpx;
   bottom: 8rpx;
   position: relative;
   }
-  .imageContainer{
-    width: 100%;
-    margin-top: 10rpx;
-    height: 350rpx;
-  }
-  .turnItem{
-    height: 340rpx;
-  }
-  .itemImg{
-    position: absolute;
-    width: 99%;
-    height: 300rpx;
-    margin-top: 20rpx;
-    border-radius: 15rpx;
-  }
-  .imgActive{
-    opacity: 1;
-    height: 340rpx;
-    margin-top: 0rpx;
-    transition:all .2s ease-in 0s;
-  }
- 
-.button-color{
-  color: #ff99cc;
+.imageContainer{
+  width: 100%;
+  margin-top: 10rpx;
+  height: 350rpx;
+}
+.turnItem{
+  height: 340rpx;
+}
+.itemImg{
+  position: absolute;
+  width: 99%;
+  height: 300rpx;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+}
+.imgActive{
+  opacity: 1;
+  height: 340rpx;
+  margin-top: 0rpx;
+  transition:all .2s ease-in 0s;
+}
+/**按钮**/
+.button {
+  top: 40rpx;
+  margin-top: 40rpx;
+  height: 90rpx;
+  width: 100%;
+  background: #ff99cc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+  padding-left: 70rpx;
 }
 
 .userinfo, .uploader, .tunnel {
@@ -183,11 +189,6 @@ page {
   transition: all 300ms ease;
 }
 
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
 .service:active {
   box-shadow: none;
 }
@@ -216,9 +217,9 @@ border-bottom: 1px solid #beb6b6 ;
   height: 40rpx;
   width: 204rpx;
   color: #fff;
- font-weight: 700;
- text-align: left;
- line-height: 40rpx;
+  font-weight: 700;
+  text-align: left;
+  line-height: 40rpx;
 }
 .userinfo {
   margin-top: 40rpx;
@@ -232,8 +233,5 @@ border-bottom: 1px solid #beb6b6 ;
   flex-direction: row;
   align-items: center;
   transition: all 300ms ease;
-}
-
-.userinfo {
   padding-left: 70rpx;
 }
