@@ -1,4 +1,27 @@
 <!--pages/competition/test2/test2.wxml-->
-<view  wx:for="{{com_detail}}">
-<view>{{item.rule}}</view>
+<!-- photoImg就是需要渲染的数据 -->
+<view class="con" wx:for="{{com_detail}}">
+<image src="{{item.image}}" style="width: 652rpx; height: 404rpx; display: inline-block; box-sizing: border-box"></image>
+ <view class="title">2022年全国acm大赛</view>
+ <view>
+ <text class="text">报名时间：2022年4月13日-----2023年4月13日</text>
+ </view>
+ <view><text class="text">比赛时间 待定</text></view>
+ <view><text class="text">主办方：美国计算机协会（ACM） 全国性</text></view>
+ <view>---------------------------------------</view>
+ <view>---------------------------------------</view>
+ <view class="maintitle">竞赛信息</view>
+ <view class="{{isHide?'hide':'show'}}" ></view>
+  <view class="tips">
+    <view class="{{height>200?'ative':''}} {{!ellipsis?'no_tive':''}}" id="text">
+      <rich-text nodes="{{item.rule}}"></rich-text>
+    </view>
+    <view class='img_box' catchtap="ellipsis" wx:if="{{height>200}}">
+      <image class='img_icon' src="{{ellipsis?'../../../images/down.png':'../../../images/up.png'}}"></image>
+    </view>
+    <view wx:if="{{height>200}}" class="drop_shadow"></view>
+  </view>
+  <navigator>寻找队伍</navigator>
 </view>
+
+
