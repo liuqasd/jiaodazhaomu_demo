@@ -1,7 +1,5 @@
-/* pages/list/list.wxss */
 .comname{
   display: flex;
-  /*flex-wrap: wrap;*/
   flex-direction: row;
   justify-content:flex-start;
   align-items: center;
@@ -62,23 +60,23 @@ input{
   border:1px solid #ff99cc;
   margin:5px;
   padding:5px;
-  width: 78%;
+  width: 75%;
   border-radius: 5px;
+  word-break:initial;
 }
 .name_workintrdmin{
-  width: 340px;
+  width: 300px;
   color: #7f7f7f;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
   align-items:center;
 }
-  
 .put_workintrd{
   border:1px solid #ff99cc;
   margin:5px;
   padding:5px;
-  width: 78%;
+  width: 75%;
   height: 70px;
   border-radius: 5px;
 }
@@ -103,13 +101,11 @@ input{
 }
 .kind-1{
   color: black;
-
-  width: 150px;
-
+  width: 400px;
 }
 .kind-2{
   color: black;
-  width: 270px;
+  width: 200px;
   margin:5px;
   padding:5px;
   display: flex;

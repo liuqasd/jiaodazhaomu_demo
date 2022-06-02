@@ -1,5 +1,3 @@
-<!--pages/publish/publish.wxml-->
-
 <form bindsubmit="submitform">
   <view class="comname">
     <text class="name_comname">竞赛名称</text>
@@ -19,7 +17,7 @@
   </view>
   <view class="workintrd">
     <text class="name_workintrd">项目详情</text>
-    <input placeholder="请输入项目详情" class="put_workintrd" value="{{msg_workintrd}}" name="active_detail"></input>
+    <textarea placeholder="请输入项目详情" class="put_workintrd" value="{{msg_workintrd}}" name="active_detail"></textarea>
     <text class="name_workintrdfj">项目附件:</text>
     <text class="name_workintrdmin" style="font-size: 20rpx;">{{username}}</text>
     <button class="upload" bindtap="uploadbutton" >上传附件</button>
@@ -27,11 +25,11 @@
   </view>
   <view class="num">
     <text class="name_num">招募人数</text>
-    <input placeholder="请输入招募人数" class="put_num" value="{{msg_num}}" name="active_number"></input>
+    <input placeholder="请输入招募人数" type="number"  bindinput="inputNum" class="put_num" value="{{msg_num}}" name="active_number"></input>
   </view>
   <view class="contract">
-    <text class="name_contract">联系方式</text>
-    <input placeholder="请输入联系方式" class="put_contract" value="{{msg_contract}}" name="active_phone"></input>
+    <text class="name_contract">邮箱地址</text>
+    <input bindchange="inputemail" placeholder="请输入联系方式" class="put_contract" value="{{msg_contract}}" name="active_phone"></input>
   </view>
   <!-- 日期 -->
   <view class="kind">

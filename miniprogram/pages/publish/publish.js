@@ -1,7 +1,5 @@
-// pages/publish/publish.js
 let db = wx.cloud.database()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -12,54 +10,61 @@ Page({
     image: '',
     file: ''
   },
-  //图片上传
+  inputNum: function (e) {
+    let Number = e.detail.value
+    let checkedNum = this.checkNum(Number)
+    },
+    checkNum: function (Number) {
+      let str =/^[0-9]*$/
+    if (str.test(Number)) {
+      return true
+    } else {
+      wx.showToast({
+        title: '请填写数字',
+    })
+    return false
+    }
+    },
+  inputemail: function (e) {
+    let active_phone = e.detail.value
+    let checkedNum = this.checkEmail(active_phone)
+    },
+    checkEmail: function (email) {     
+      let str = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+    if (str.test(email)) {
+      return true
+    } else {
+      wx.showToast({
+        title: '请填写正确邮箱',
+      })
+      return false
+    }
+    },
+    //图片上传
   upimages() {
     let that = this
     wx.chooseImage({
       count: 1,
       sizeType: ['original'],
       sourceType: ['album', 'camera'],
-      success(res){
+      success(res) {
         console.log(res.tempFilePaths)
-        let time=Date.now()
-        let src=res.tempFilePaths[0]
+        let time = Date.now()
         wx.cloud.uploadFile({
-          cloudPath:"friends",
-          filePath:src,
+          cloudPath:"friends.images/"+time+".jpg",//文件名
+          filePath:res.tempFilePaths[0] //文件
         })
         .then(res=>{
           that.setData({
             image:res.fileID
           })
+          wx.showToast({
+            title: '上传成功',
+            icon:'none'
+          })
         })
-        //publish.js? [sm]:31 cloud://cloud1-6g4ohasv60752e78.636c-cloud1-6g4ohasv60752e78-1305962677/friends/1652536761327
       }
     })
-    // wx.chooseImage({
-    //   count: 1,
-    //   sizeType: ['original'],
-    //   sourceType: ['album', 'camera'],
-    //   success(res) {
-    //     console.log(res.tempFilePaths[0])
-    //     let time = Date.now()
-    //     that.setData({
-    //       image:res.tempFilePaths[0]
-    //     })
-    //     wx.cloud.uploadFile({
-    //       cloudPath:"friends.images/"+time,//文件名
-    //       filePath:res.tempFilePaths[0] //文件
-    //     })
-    //     .then(res=>{
-
-
-    //       wx.showToast({
-    //         title: '上传成功',
-    //         icon:'none'
-    //       })
-    //     })
-
-    //   }
-    // })
   },
   // 项目时间
   bindDateChange(e) {
@@ -148,7 +153,6 @@ Page({
     .then(res=>{
       console.log(res.data)
     })
-
   },
 
   /**

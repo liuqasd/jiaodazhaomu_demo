@@ -23,10 +23,6 @@ Page({
         imagePath:"/images/competition/acm.jpg"
       }
     ],
-
-
-   
-
     userInfo: {},
     hasUserInfo: false,
     logged: false,

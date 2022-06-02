@@ -11,7 +11,8 @@
     "pages/competition/test/test",
     "pages/teammessage/teammessage",
     "pages/team/team",
-    "pages/competition/test2/test2"
+    "pages/competition/test2/test2",
+    "pages/mypublish/mypublish"
   ],
   "window": {
     "backgroundColor": "#F3F3F3",
@@ -19,8 +20,7 @@
     "navigationBarBackgroundColor": "#ff99cc",
     "navigationBarTitleText": "交大招募",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true,
-    "backgroundColorBottom": ""
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
@@ -45,6 +45,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
   }
 }

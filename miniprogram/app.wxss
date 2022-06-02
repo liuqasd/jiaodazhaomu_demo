@@ -16,18 +16,6 @@ page {
   padding: 200rpx 0;
 } 
 
-button {
-  background: initial;
-}
-
-button:focus{
-  outline: 0;
-}
-
-button::after{
-  border: none;
-}
-
 .userinfo, .uploader, .tunnel {
   margin-top: 40rpx;
   height: 140rpx;
@@ -139,11 +127,6 @@ button::after{
   align-content: center;
   justify-content: center;
   transition: all 300ms ease;
-}
-
-.service-button {
-  position: absolute;
-  top: 40rpx;
 }
 
 .service:active {

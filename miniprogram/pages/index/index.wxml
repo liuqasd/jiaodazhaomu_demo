@@ -1,11 +1,10 @@
-<!-- index.wxml -->
+
 <!-- 搜索框 -->
 <view class='row'>
   <icon class="icon-small" type="search" size="24"></icon>
   <input class='input' placeholder='搜索竞赛名称'/>
   <icon type='clear'/>
 </view>
-
 <!-- 轮播 -->
 <view class="swiperContainer">
   <swiper class="imageContainer" bindchange="swiperChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
@@ -16,39 +15,33 @@
     </block>
   </swiper>
 </view>
-
-<view>
-  <button class="button-color" type="default" plain="true">
-    <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="nav-default">招募队友</navigator>
-  </button>
-  <button type="default" plain="true">
-    <navigator style='font-weight: bold' url='/pages/team/team' open-type="navigate" hover-class='nav-hover' class="nav-default">寻找队伍</navigator>
-  </button>
-  <van-button type="primary">按钮</van-button>
-
-</view>
-
+<!-- 按钮 -->
 <view class="button">
-  <block class="userinfo-opendata">
-    <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="userinfo-nickname">
+  <block>
+    <navigator style='font-weight: bold' url='/pages/team/team' open-type="navigate" hover-class='nav-hover'>
+      寻找队伍
+    </navigator>
+  </block>
+  <text>---------------------</text>
+  <block>
+    <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover'>
       招募队友
     </navigator>
   </block>
 </view>
-
 <!-- 竞赛信息 -->
 <view class="out"> 
-  <view class="userinfo">
-    <navigator url='/pages/contest/contest' class="font-style">竞赛信息总览</navigator>
-</view>
-<view class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" data-id="{{item.id}}" bindtap='skipTravelDetails'>
-    <view class="pic_details"  > 
+  <text>\n</text>
+    <navigator style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="contestTop">
+      --竞赛信息总览--
+    </navigator>
+  <view class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" data-id="{{item.id}}" bindtap='skipTravelDetails'>
+    <view class="pic_details"> 
       <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
     </view>
     <view class="competition_textdet">
-    <view class="texttitile"> {{item.title}}</view>
+    <view class="texttitile">{{item.title}}</view>
     <view class="cmptime">{{item.time}}</view>
     </view>
-    <!-- <navigator url='{{item.url}}'>点击详情</navigator> -->
-</view >
+</view>
 </view>

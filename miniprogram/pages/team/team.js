@@ -1,44 +1,92 @@
+let db=wx.cloud.database()
+const util=require('../../utils/util.js')
 Page({
-  data:{
-    thisTeamList:[
-    {
-      imagePath:"/images/head.png",
-      name:"竞赛名",
-      introduction:"队伍简介",
-      aspiration:"意愿",
-      contact:"联系方式",
-      isAlreadyHave:true,
-      id:0
-    },
-    {
-      imagePath:"/images/head.png",
-      name:"小比赛",
-      introduction:"已有划水一人",
-      aspiration:"找大腿",
-      contact:"520",
-      isAlreadyHave:true,
-      id:1
-    },
-    {
-      imagePath:"/images/head.png",
-      name:"微比赛",
-      introduction:"已有划水两人",
-      aspiration:"划水第三人",
-      contact:"521",
-      isAlreadyHave:true,
-      id:2
-    }
-  ]
-  },
-  f0:function(event){
-    var teamId = event.currentTarget.dataset.teamId
-    wx.navigateTo({
-      url:"/pages/detail/detail?id" + teamId
+  // 获取项目列表
+  getlist(){
+    let that=this
+    let time=util.formatTime(new Date())
+    let day=time[3]+time[4]*1
+    let month=time[0]+time[1]*1
+    db.collection("active_base").get()
+    .then(res=>{
+      for(var i=0;i<res.data.length;i++){
+        time=res.data[i].active_endtime
+        let ac_mo=time[5]+time[6]*1
+        let ac_da=time[8]+time[9]*1
+        if(ac_mo<month){
+          res.data[i].active_end=true
+        }
+        else if(ac_mo==month){
+          if(ac_da<day){
+            res.data[i].active_end=true
+          }
+          else{
+            res.data[i].active_end=false
+          }
+        }
+        else{
+          res.data[i].active_end=false
+        }
+      }
+      that.setData({
+        list:res.data
+      })
     })
   },
-  onShareAppMessage: function(){
-    return{
-      title:"寻找队伍"
-    }
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad(options) {
+     this.getlist()
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
   }
 })

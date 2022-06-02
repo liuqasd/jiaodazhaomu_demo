@@ -1,4 +1,5 @@
 /**单位是rpx，而不是px。rpx是小程序为适应不同宽度的手机屏幕，而发明的一种长度单位。不管什么手机屏幕，宽度一律为750rpx。它的好处是换算简单，如果一个元素的宽度是页面的一半，只要写成width: 375rpx;即可**/
+
 /**搜索框**/
 .row{
   display: flex;
@@ -43,19 +44,29 @@
 }
 /**按钮**/
 .button {
-  top: 40rpx;
-  margin-top: 40rpx;
-  height: 90rpx;
-  width: 100%;
-  background: #ff99cc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
+  font-size: 40rpx;
+  color:white;
+  background-color: #ff99cc;
+  background-size: cover;
+  text-align: center;
+  margin-left: 120rpx; /**一共750rpx，左边留16%**/
+  width: 68%;
+  border-radius: 20rpx;/**圆角**/
+}
+/**总览顶部**/
+.contestTop {
+  width: 750rpx;
+  height: 80rpx;
+  /**圆角**/
+  border-top-left-radius:0.8em;
+  border-top-right-radius:0.8em;
+  background-size: cover;
+  background-color: #ff99cc;
+  font-size: 40rpx;
+  color:white;
+  text-align: left;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  transition: all 300ms ease;
-  padding-left: 70rpx;
 }
 
 .userinfo, .uploader, .tunnel {
@@ -76,15 +87,6 @@
   padding-left: 120rpx;
 }
 
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-}
-
 .userinfo-block-avatar {
   width: 100rpx;
   height: 100rpx;
@@ -99,24 +101,6 @@
 
 .userinfo-avatar:after {
   border: none;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #ff99cc;
-  background-color: white;
-  background-size: cover;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 10px;
-}
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.userinfo-nickname-wrapper {
-  flex: 1;
 }
 
 .uploader, .tunnel {
@@ -202,7 +186,11 @@
 
 /* --竞赛信息的渲染 --*/
 /* pages/contest/contest.wxss */
-.out{padding: 30rpx,30rpx,30rpx,0rpx; box-sizing: border-box;padding: 0rpx 0 0 0;}
+.out{
+  padding: 30rpx,30rpx,30rpx,0rpx; 
+  box-sizing: border-box;
+  padding: 0rpx 0 0 0;
+}
 .Competition_Details{  display: flex; height: 150rpx;margin-bottom: 20rpx;border-bottom: 4rpx solid #beb6b6}
 .pic_details{flex: 2 ;padding-bottom: 2;}
 .pic_details image{width: 100%;height: 100%;}
