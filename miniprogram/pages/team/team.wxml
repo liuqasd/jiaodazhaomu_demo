@@ -1,4 +1,4 @@
-<view wx:key="{{list}}" wx:key="index" style="margin-top: 30rpx;">
+<view wx:for="{{list}}" wx:key="this" style="margin-top: 30rpx;">
   <view>{{item.active_endtime}}</view>
   <view wx:if="{{!item.active_end}}">
     <text>项目进行中</text>
