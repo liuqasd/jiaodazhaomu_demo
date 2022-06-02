@@ -1,1 +1,62 @@
-/* pages/competition/test2/test2.wxss */
+/* pages/competition/acm/acm.wxss */
+/* pager/competition/acm/acm.wxss */
+/* pages/wxCase/exlipTwo/index2.wxss */
+.con {
+  background: rgb(240, 235, 235);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin: 24rpx 39rpx 0 24rpx;
+}
+
+.tips {
+  font-size: 25rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 30rpx;
+  position: relative;
+}
+.text {
+  font-size: 25rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 40rpx;
+  position: relative;
+}
+
+.img_box {
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.img_icon {
+  width: 45rpx;
+  height: 50rpx;
+  color: #000;
+}
+
+
+.ative {
+  height: 400rpx;
+  overflow: hidden;
+}
+
+.no_tive {
+  height: auto !important;
+}
+
+.maintitle {
+  font-size: 35rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 40rpx;
+  position: relative;
+  font-weight: 1000;
+}
+.title {
+  font-size: 40rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 40rpx;
+  position: relative;
+  font-weight: 1000;
+}

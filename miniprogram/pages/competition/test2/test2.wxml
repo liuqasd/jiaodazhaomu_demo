@@ -1,4 +1,27 @@
 <!--pages/competition/test2/test2.wxml-->
-<view  wx:for="{{com_detail}}">
-<view>{{item.rule}}</view>
+<!-- photoImg就是需要渲染的数据 -->
+<view class="con" wx:for="{{com_detail}}">
+<image src="{{item.image}}" style="width: 652rpx; height: 404rpx; display: inline-block; box-sizing: border-box"></image>
+ <view class="title">{{item.title}}</view>
+ <view>
+ <text class="text">{{item.time}}</text>
+ </view>
+ <view><text class="text">{{item.comtime}}</text></view>
+ <view><text class="text">{{item.Host}}</text></view>
+ <view>---------------------------------------</view>
+ <view>---------------------------------------</view>
+ <view class="maintitle">{{item.competition_info}}</view>
+ <view class="{{isHide?'hide':'show'}}" ></view>
+  <view class="tips">
+    <view class="{{height>200?'ative':''}} {{!ellipsis?'no_tive':''}}" id="text">
+      <rich-text nodes="{{item.rule}}"></rich-text>
+    </view>
+    <view class='img_box' catchtap="ellipsis" wx:if="{{height>200}}">
+      <image class='img_icon' src="{{ellipsis?'../../../images/down.png':'../../../images/up.png'}}"></image>
+    </view>
+    <view wx:if="{{height>200}}" class="drop_shadow"></view>
+  </view>
+  <navigator>寻找队伍</navigator>
 </view>
+
+

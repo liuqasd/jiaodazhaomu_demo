@@ -31,7 +31,6 @@ Page({
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
   },
-   // 网络数据请求  
    onLoad: function (options) {
     var _this = this;
     //1、引用数据库   
@@ -63,6 +62,6 @@ Page({
     wx.navigateTo({
         url: '../competition/test2/test2?oidd='+oId,
     })
-}
+    }  
 })
 

@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    phptoImage: "",//匹配的数据
+    ellipsis:true,//默认收起
     imgList: [{
         id: 1,
         images: ["../../../images/competition/acm.jpg"]
@@ -21,26 +21,24 @@ Page({
       com_detail:[], //
       comlist:[]
   },
-
-  onLoad: function (options) {
-    // options.id 就是首页传过来的id，接下来循环找到id所匹配的数据就可以进行渲染啦！
-    this.data.com_detail.forEach(item => {
-      if (options.oidd == item.id) {
-        this.setData({
-          comlist: item
-        })
-      }
+  ellipsis: function () {
+    var value =!this.data.ellipsis;
+    this.setData({
+      ellipsis: value
     })
   },
   onLoad: function (options) {
-    var _this = this;
+    console.log(options);
+    let a=options.oidd;
     //1、引用数据库   
     const db = wx.cloud.database({
       //这个是环境ID不是环境名称,在云开发的设置中你就可以看到你的环境id
       env: 'cloud1-0gnb268w172baecb'
     })
     //2、开始查询数据了  news对应的是集合的名称   
-    db.collection('competiton_detail').get({
+    db.collection('competiton_detail').where({
+      id:a
+    }).get({
       //如果查询成功的话    
       success: res => {
         console.log(res.data)
