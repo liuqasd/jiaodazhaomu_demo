@@ -49,6 +49,5 @@
     <view class="texttitile"> {{item.title}}</view>
     <view class="cmptime">{{item.time}}</view>
     </view>
-    <!-- <navigator url='{{item.url}}'>点击详情</navigator> -->
-</view >
+</view>
 </view>
