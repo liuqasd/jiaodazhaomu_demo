@@ -1,0 +1,26 @@
+<view class="con" wx:for="{{list}}">
+<image src="{{item.image}}" style="width: 652rpx; height: 404rpx; display: inline-block; box-sizing: border-box"></image>
+ <view class="title">{{item.active_name}}</view>
+<view style="display: flex; flex-direction: row;" class="maintitle">
+ <text>项目名称:{{item.active_name2}}</text>
+ <text>||</text>
+ <text>招募人数:{{item.active_number}}</text>
+ <text>||</text>
+ <text>截止日期：{{item.active_endtime}}</text>
+</view>
+ <view>简介:{{item.active_intro}}</view>
+ <view class="text">{{item.active_detail}}</view>
+ <view class="text">队长简介：{{item.active_leader}}</view>
+ <view class="text">联系方式:{{item.active_phone}}</view>
+ <view><text class="text">截止日期：{{item.active_endtime}}</text></view>
+ <view class="{{isHide?'hide':'show'}}" ></view>
+  <view class="tips">
+    <view class="{{height>200?'ative':''}} {{!ellipsis?'no_tive':''}}" id="text">
+      <rich-text nodes="{{item.rule}}"></rich-text>
+    </view>
+    <view wx:if="{{height>200}}" class="drop_shadow"></view>
+  </view>
+</view>
+
+
+

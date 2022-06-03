@@ -8,7 +8,8 @@
     "pages/competition/test/test",
     "pages/team/team",
     "pages/competition/test2/test2",
-    "pages/mypublish/mypublish"
+    "pages/mypublish/mypublish",
+    "pages/teamdetail/teamdetail"
   ],
   "window": {
     "backgroundColor": "#F3F3F3",

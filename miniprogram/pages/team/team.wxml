@@ -1,13 +1,9 @@
 <view wx:for="{{list}}" wx:key="this" style="margin-top: 30rpx;">
-  <view>{{item.active_endtime}}</view>
-  <view wx:if="{{!item.active_end}}">
-    <text>项目进行中</text>
-  </view>
-  <view wx:if="{{item.active_end}}">
-    <text>报名已结束</text>
-  </view>
-    <view>竞赛名称:{{item.active_name}}</view>
-    <view>项目名称:{{item.active_name2}}</view>
+    <van-cell-group inset>
+      <van-cell title="{{item.active_name}}" value="招募人数:{{item.active_number}}" label="{{item.active_intro}}" link-type="navigateTo" url="/pages/teamdetail/teamdetail"/>
+    </van-cell-group>
+    <!--<view>竞赛名称:{{item.active_name}}</view>-->
+    <!--<view>项目名称:{{item.active_name2}}</view>
     <view>项目简介:{{item.active_intro}}</view>
     <view>队长简介:{{item.active_leader}}</view>
     <view>项目详情:{{item.active_detail}}</view>
@@ -15,9 +11,6 @@
     <view>招募人数:{{item.active_number}}</view>
     <view>联系方式:{{item.active_phone}}</view>
     <view>截止日期:{{item.active_endtime}}</view>
-    <image src="{{item.image}}"></image>
+    <image src="{{item.image}}"></image>-->
 </view>
-<van-cell-group inset>
-  <van-cell title="单元格" value="内容" label="描述信息" />
-</van-cell-group>
 

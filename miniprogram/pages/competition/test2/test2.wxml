@@ -1,4 +1,3 @@
-<!--pages/competition/test2/test2.wxml-->
 <!-- photoImg就是需要渲染的数据 -->
 <view class="con" wx:for="{{com_detail}}">
 <image src="{{item.image}}" style="width: 652rpx; height: 404rpx; display: inline-block; box-sizing: border-box"></image>
@@ -21,7 +20,9 @@
     </view>
     <view wx:if="{{height>200}}" class="drop_shadow"></view>
   </view>
-  <navigator>寻找队伍</navigator>
+  <navigator url='/pages/team/team' open-type="navigate" hover-class='nav-hover'>
+    寻找队伍
+  </navigator>
 </view>
 
 
