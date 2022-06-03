@@ -58,7 +58,14 @@ Page({
       }
     })
   }, 
-
+  skipTravelDetails: function(e){
+    var oId =e.currentTarget.dataset.id //获取点击产品时拿到的id，就是data-id传过来的值
+    // wx.navigateTo跳转页面的方法
+    //URL是传递的是详情页的路径，把id拼接传过去就可以啦
+    wx.navigateTo({
+        url: '../teamdetail/teamdetail?oidd='+oId,
+    })
+    } ,
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

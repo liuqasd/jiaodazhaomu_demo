@@ -1,6 +1,6 @@
-<view wx:for="{{list}}" wx:key="this" style="margin-top: 30rpx;">
+<view wx:for="{{list}}" wx:key="this" data-id="{{item._id}}" bindtap='skipTravelDetails' >
     <van-cell-group inset>
-      <van-cell title="{{item.active_name}}" value="招募人数:{{item.active_number}}" label="{{item.active_intro}}" link-type="navigateTo" url="/pages/teamdetail/teamdetail"/>
+      <van-cell title="{{item.active_name}}" value="招募人数:{{item.active_number}}" label="{{item.active_intro}}"  />
     </van-cell-group>
     <!--<view>竞赛名称:{{item.active_name}}</view>-->
     <!--<view>项目名称:{{item.active_name2}}</view>
@@ -9,7 +9,7 @@
     <view>项目详情:{{item.active_detail}}</view>
     <view>项目附件</view>
     <view>招募人数:{{item.active_number}}</view>
-    <view>联系方式:{{item.active_phone}}</view>
+    <view>联系方式:{{item.active_phone}}</view>`
     <view>截止日期:{{item.active_endtime}}</view>
     <image src="{{item.image}}"></image>-->
 </view>
