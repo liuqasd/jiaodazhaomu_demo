@@ -1,4 +1,3 @@
-
 <!-- 搜索框 -->
 <view class='row'>
   <icon class="icon-small" type="search" size="24"></icon>
@@ -8,9 +7,9 @@
 <!-- 轮播 -->
 <view class="swiperContainer">
   <swiper class="imageContainer" bindchange="swiperChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
-    <block wx:for="{{thisCompetitionList}}" wx:key="index">
+    <block wx:for="{{comdataList}}" wx:key="index">
       <swiper-item class="turnItem">
-          <image class="itemImg {{index == swiperCurrent ? 'imgActive':''}}" src='{{item.imagePath}}'></image>
+          <image class="itemImg {{index == swiperCurrent ? 'imgActive':''}}" src='{{item.temp}}'></image>
       </swiper-item>
     </block>
   </swiper>
@@ -35,7 +34,7 @@
     <navigator style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="contestTop">
       --竞赛信息总览--
     </navigator>
-  <view class="Competition_Details" wx:for="{{comdataList}}"  wx:key="this" data-id="{{item.id}}" bindtap='skipTravelDetails'>
+  <view class="Competition_Details" wx:for="{{comdataList}}" wx:key="this" data-id="{{item.id}}" bindtap='skipTravelDetails'>
     <view class="pic_details"> 
       <image src="{{item.temp}}" mode="widthFix" style="width: 188rpx; height: 143rpx; display: inline-block; box-sizing: border-box"></image>
     </view>

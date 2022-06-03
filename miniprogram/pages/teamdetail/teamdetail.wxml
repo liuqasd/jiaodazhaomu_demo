@@ -12,7 +12,6 @@
  <view class="text">{{item.active_detail}}</view>
  <view class="text">队长简介：{{item.active_leader}}</view>
  <view class="text">联系方式:{{item.active_phone}}</view>
- <view><text class="text">截止日期：{{item.active_endtime}}</text></view>
  <view class="{{isHide?'hide':'show'}}" ></view>
   <view class="tips">
     <view class="{{height>200?'ative':''}} {{!ellipsis?'no_tive':''}}" id="text">

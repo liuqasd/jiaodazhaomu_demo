@@ -7,18 +7,12 @@
   </block>
 </view>
 <view class="userinfo">
-  <block style="display: flex;flex-direction: column;align-items: center;">
-    <button type="mini">
-    <navigator style='font-weight: bold' url='/pages/mypublish/mypublish' open-type="navigate" hover-class='nav-hover'>
-      我的招募
-    </navigator>
-  </button>
-</block>
+  <navigator style='font-weight: bold' url='/pages/mypublish/mypublish' open-type="navigate" hover-class='nav-hover' class="userinfo-nickname">
+    我的招募
+  </navigator>
 </view>
 <view class="userinfo">
-  <block class="userinfo-opendata">
-    <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="userinfo-nickname">
-      点击发布
-    </navigator>
-  </block>
+  <navigator style='font-weight: bold' url='/pages/publish/publish' open-type="navigate" hover-class='nav-hover' class="userinfo-nickname">
+    点击发布
+  </navigator>
 </view>
