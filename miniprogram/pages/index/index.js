@@ -1,4 +1,3 @@
-//index.js
 const app = getApp();
 const db = wx.cloud.database({});
 const cont = db.collection('competition_information');
@@ -29,7 +28,16 @@ Page({
     takeSession: false,
     requestResult: '',
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl'), // 如需尝试获取用户信息可改为false
+
+  },
+  onShareAppMessage:function(){
+    return{
+      title:'交大招募',
+      path:'/pages/index/index',
+      success:(res) =>{
+      }
+    }
   },
    onLoad: function (options) {
     var _this = this;

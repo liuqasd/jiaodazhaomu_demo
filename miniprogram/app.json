@@ -43,6 +43,7 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index"
   }
 }
